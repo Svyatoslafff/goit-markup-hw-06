@@ -6,8 +6,9 @@ body{
     font-style: normal;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 2%;
+    letter-spacing: 0.02em;
     background: #fff;
+    color: #434455;
 }
 
 a{
@@ -27,10 +28,11 @@ h1,h2{
 
 h2{
     font-size: 36px;
-    line-height: 1.11111;
+    line-height: 1.11;
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
+    text-transform: capitalize;
 }
 
 h3{
@@ -57,17 +59,14 @@ header{
     font-weight: 700;
     font-style: normal;
     font-size: 18px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.03em;
-    text-transform: uppercase;
+    text-transform: uppercase;    
+    color:#4d5ae5 ;
 }
 
-#page-logo-header{
-    color: #2e2f42;    
-}
-
-.logo-web-span{
-    color: #4d5ae5;
+.page-logo-span-header{
+    color: #2e2f42;
 }
 
 
@@ -81,13 +80,22 @@ header{
     color: #404bbf;
 }
 
+.nav-list-link:focus {
+    color: #404bbf;
+}
+
 
 /* Adresses */
-.header-addresses-link{
-    color: #434455;
+
+.header-address{
+    font-style: normal;
 }
 
 .header-addresses-link:hover {
+    color: #404bbf;
+}
+
+.header-addresses-link:focus {
     color: #404bbf;
 }
 
@@ -103,13 +111,12 @@ header{
 .hero-title {
     font-size: 56px;
     line-height: 60px; 
-    line-height: 1.07143;
+    line-height: 1.07;
     text-align: center;
     color: #fff;
 }
 
 .hero-button {
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background: #4d5ae5;
     font-weight: 500;
     font-size: 16px;
@@ -117,14 +124,21 @@ header{
     letter-spacing: 0.04em;
     color: #fff;
 }
+
+.hero-button:hover {
+    background: #404bbf;
+    cursor: pointer;
+}
+
+.hero-button:focus {
+    background: #404bbf;
+}
 /* #endregion hero */
 
 
 
 /* #region section of description */
-.lists-text{
-    color: #434455;
-}
+
 /* #endregion section of description */
 
 
@@ -134,7 +148,6 @@ header{
     background: #f4f4fd;
 }
 .our-team-item{
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     background: #fff;
 }
 .our-team-item-title{
@@ -159,7 +172,7 @@ header{
 footer{
     background: #2e2f42;
 }
-#page-logo-footer{
+.page-logo-span-footer{
     color: #f4f4fd;
 }
 .footer-text{
