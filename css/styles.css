@@ -99,12 +99,16 @@ header{
     color: #404bbf;
 }
 
+.header-addresses a{
+    color: inherit;
+}
+
 /* #endregion Header */
 
 
 
 /* #region hero */
-.Hero {
+.hero {
     background-color: #2e2f42;
 }
 
