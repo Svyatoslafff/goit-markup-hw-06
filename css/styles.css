@@ -1,0 +1,168 @@
+/* #region Basic page settings */
+body{
+    /* Roboto regular */
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 2%;
+    background: #fff;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h1,h2{
+    /* Roboto bold */
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h2{
+    font-size: 36px;
+    line-height: 1.11111;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+}
+
+h3{
+    /* Roboto medium */
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+}
+/* #endregion Basic page settings */
+
+
+
+/* #region Header */
+header{
+    background-color: #fff;
+}
+.page-logo{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.16667;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+#page-logo-header{
+    color: #2e2f42;    
+}
+
+.logo-web-span{
+    color: #4d5ae5;
+}
+
+
+/* Navigation */
+.nav-list-link {
+    font-weight: 500;
+    color: #2e2f42;
+}
+
+.nav-list-link:hover {
+    color: #404bbf;
+}
+
+
+/* Adresses */
+.header-addresses-link{
+    color: #434455;
+}
+
+.header-addresses-link:hover {
+    color: #404bbf;
+}
+
+/* #endregion Header */
+
+
+
+/* #region hero */
+.Hero {
+    background-color: #2e2f42;
+}
+
+.hero-title {
+    font-size: 56px;
+    line-height: 60px; 
+    line-height: 1.07143;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-button {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background: #4d5ae5;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+/* #endregion hero */
+
+
+
+/* #region section of description */
+.lists-text{
+    color: #434455;
+}
+/* #endregion section of description */
+
+
+
+/* #region our team */
+.our-team{
+    background: #f4f4fd;
+}
+.our-team-item{
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    background: #fff;
+}
+.our-team-item-title{
+    text-align: center;
+}
+.our-team-text{
+    text-align: center;
+}
+/* #endregion our team */
+
+
+
+/* #region our portfolio */
+.our-portfolio-list-item{
+    background-color: #fff;
+}
+/* #endregion our portfolio */
+
+
+
+/* #region footer */
+footer{
+    background: #2e2f42;
+}
+#page-logo-footer{
+    color: #f4f4fd;
+}
+.footer-text{
+    color: #f4f4fd;
+}
+/* #endregion footer */
