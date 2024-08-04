@@ -290,6 +290,10 @@ header .container{
     gap: 24px;
 }
 
+.our-team-title{
+    margin-bottom: 72px;
+}
+
 .our-team-item{
     display: flex;
     flex-direction: column;
@@ -350,8 +354,8 @@ header .container{
     justify-content: flex-start;
     flex-direction: column;
     padding: 32px 16px;
-    border-top: none;
     border: 1px solid #e7e9fc;
+    border-top: none;
 }
 
 .our-portfolio-text-container h3{
