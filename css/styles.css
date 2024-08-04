@@ -11,6 +11,15 @@ body{
     color: #434455;
 }
 
+*{
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    display: block;
+}
+
 a{
     text-decoration: none;
 }
@@ -45,6 +54,21 @@ h3{
     letter-spacing: 0.02em;
     color: #2e2f42;
 }
+
+section, header, main, footer{
+    min-width: 100vh;
+}
+
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    /* max-width: 1158px; */
+    margin-left: 141px;
+    margin-right: 141px;
+}
+
+
+
 /* #endregion Basic page settings */
 
 
@@ -53,6 +77,35 @@ h3{
 header{
     background-color: #fff;
 }
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+/* Navigation */
+
+header .container a{
+    padding-top: 25.5px;
+    padding-bottom: 25.5px;
+}
+
+.nav-list-item{
+    padding-top: 25.5px;
+    padding-bottom: 25.5px;
+}
+
+.header-navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 76px;
+}
+
 .page-logo{
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
@@ -69,8 +122,12 @@ header{
     color: #2e2f42;
 }
 
+.header-navigation ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
 
-/* Navigation */
 .nav-list-link {
     font-weight: 500;
     color: #2e2f42;
@@ -85,10 +142,18 @@ header{
 }
 
 
+
+
 /* Adresses */
 
 .header-addresses{
     font-style: normal;
+}
+.header-addresses-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
 }
 
 .header-addresses-link:hover {
@@ -110,6 +175,18 @@ header{
 /* #region hero */
 .hero {
     background-color: #2e2f42;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    border: 1px solid #000;
+}
+
+.hero .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 188px;
+    padding-bottom: 188px;
+    /* padding: 188px 331px; */
+    gap: 43px;
 }
 
 .hero-title {
@@ -118,6 +195,7 @@ header{
     line-height: 1.07;
     text-align: center;
     color: #fff;
+    max-width: 500px ;
 }
 
 .hero-button {
@@ -128,6 +206,10 @@ header{
     letter-spacing: 0.04em;
     color: #fff;
     cursor: pointer;
+    min-width: 169px;
+    padding: 16px 32px;
+    border: 1px solid #000;
+    border-radius: 4px;
 }
 
 .hero-button:hover {
@@ -144,6 +226,27 @@ header{
 
 /* #region section of description */
 
+.list-of-descriptions{
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    margin: 120px 0px 112px;
+}
+
+.list-of-descriptions-item{
+    flex-basis: calc((100% - 72px)/4);
+}
+
+.section-of-description h2{
+    display: none;
+}
+
+.section-of-description .lists-text{
+    margin-top: 8px;
+}
+
+
 /* #endregion section of description */
 
 
@@ -152,8 +255,29 @@ header{
 .our-team{
     background: #f4f4fd;
 }
+
+.our-team .container{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.our-team-list{
+    padding-top: 72px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
 .our-team-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+    align-items: center;
+    padding-bottom: 32px;
     background: #fff;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 .our-team-item-title{
     text-align: center;
@@ -161,14 +285,46 @@ header{
 .our-team-text{
     text-align: center;
 }
+
+.our-team-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
 /* #endregion our team */
 
 
 
 /* #region our portfolio */
+
+.our-portfolio .container{
+    padding-top: 128px;
+    padding-bottom: 120px;
+}
+
+.our-portfolio-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    row-gap: 48px;
+    column-gap: 24px;
+    padding-top: 72px;
+}
+
 .our-portfolio-list-item{
     background-color: #fff;
 }
+
+.our-portfolio-text-container{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 32px 0 32px 16px;
+}
+
 /* #endregion our portfolio */
 
 
@@ -182,5 +338,12 @@ footer{
 }
 .footer-text{
     color: #f4f4fd;
+    padding-top: 16px;
+}
+
+footer .container{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 264px;
 }
 /* #endregion footer */
