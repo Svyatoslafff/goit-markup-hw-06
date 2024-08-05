@@ -66,9 +66,9 @@ section{
 .container{
     padding-right: 15px;
     padding-left: 15px;
-    /* max-width: 1158px; */
-    margin-left: 141px;
-    margin-right: 141px;
+    max-width: 1158px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -313,10 +313,6 @@ header .container{
 }
 
 .our-team-text-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     padding: 32px 0;
 }
 
@@ -337,7 +333,6 @@ header .container{
     justify-content:center;
     row-gap: 48px;
     column-gap: 24px;
-    padding-top: 72px;
 }
 
 .our-portfolio-list-item{
@@ -350,9 +345,6 @@ header .container{
 }
 
 .our-portfolio-text-container{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
     border-top: none;
@@ -385,9 +377,6 @@ footer .page-logo{
 
 .footer-text{
     color: #f4f4fd;
-}
-
-footer .container{
     width: 264px;
 }
 /* #endregion footer */
