@@ -451,7 +451,7 @@ header .container{
     color: #f4f4fd;
     padding: 40px 32px 0 ;
 }
-.overlay-box:hover .overlay-text-box{
+.our-portfolio-list-item:hover .overlay-text-box{
     transform: translateY(0);
 }
 
