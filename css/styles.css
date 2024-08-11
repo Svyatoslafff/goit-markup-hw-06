@@ -391,7 +391,7 @@ header .container{
 }
 
 
-.our-team-item:hover .icon-list-item a, .our-team-item:focus .icon-list-item a, .our-team-item .icon-list-item a:active,.our-team-item .icon-list-item:focus a {
+.our-team-item:hover .icon-list-item a, .our-team-item:focus .icon-list-item a, .our-team-item .icon-list-item a:active,.our-team-item .icon-list-item a:focus {
     background-color: #404bbf;;
 }
 
