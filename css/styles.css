@@ -384,6 +384,12 @@ header .container{
 .our-team .icon{
     width: 40px;
     height: 40px;
+    fill: #4d5ae5;
+    transition: fill 150ms ease-in-out;
+}
+
+.our-team-item:hover .icon{
+    fill: #404bbf;;
 }
 
 
@@ -488,5 +494,10 @@ footer .icon-container{
 .footer .icon{
     height: 40px;
     width: 40px;
+    fill: #4d5ae5;
+    transition: fill 150ms ease-in-out;
+}
+.footer .icon:hover{
+    fill: #31d0aa;
 }
 /* #endregion footer */
