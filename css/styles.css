@@ -391,7 +391,7 @@ header .container{
 }
 
 
-.our-team-item:hover .icon-list-item a, .our-team-item:focus .icon-list-item a{
+.our-team-item:hover .icon-list-item a, .our-team-item:focus .icon-list-item a, .our-team-item .icon-list-item a:active,.our-team-item .icon-list-item:focus a {
     background-color: #404bbf;;
 }
 
@@ -453,7 +453,7 @@ header .container{
     top: 0;
     right: 0;
     color: #f4f4fd;
-    padding: 40px 32px 0 ;
+    padding: 40px 32px;
 }
 .our-portfolio-list-item:hover .overlay-text{
     transform: translateY(0);
