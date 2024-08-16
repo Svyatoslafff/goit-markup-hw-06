@@ -619,7 +619,7 @@
                     </p>
                 </div>
                 <div class="footer-social-media">
-                    <p class="footer-social-title">Social media</p>
+                    <p class="footer-title">Social media</p>
                     <ul class="icon-list">
                         <li class="icon-list-item">
                             <a href="" class="icon-link">
@@ -659,8 +659,34 @@
                         </li>
                     </ul>
                 </div>
+                <div class="footer-form-container">
+                    <p class="footer-title">Subscribe</p>
+                    <form action="" class="footer-form">
+                        <input class="footer-text-input" type="text" name="email" placeholder="E-mail">
+                        <button class="footer-form-button" type="submit" >Subscribe <svg class="icon" width="24" height="24"><use href="./images/icons.svg#icon-telegram-2"></use></svg></button>
+                    </form>
+                </div>
             </div>
         </footer>
+        <div class="overlay-container">
+            <div class="overlay-content">
+                <button type="button" class="close-overlay"><svg width="8" height="8" class="icon"><use href="./images/icons.svg#icon-cross"></use></svg></button>
+                <p class="overlay-title">Leave your contacts and we will call you back</p>
+                <form action="" class="overlay-form">
+                    <div class="overlay-information-container">
+                        <label class="overlay-form-label">Name<input type="text" name="user-name" placeholder="" autofocus></label>
+                        <label class="overlay-form-label">Phone<input type="tel" name="user-tel" placeholder="" ></label>
+                        <label class="overlay-form-label">Email<input type="email" name="user-email" placeholder="" ></label>
+                        <label class="overlay-form-label">Comment<textarea class="overlay-textarea" name="user-comment" id="" placeholder="Text input"></textarea></label>
+                    </div>
+                    <div class="privacy-container">
+                        <input type="checkbox" name="privacy" id="">
+                        <p class="overlay-text">I accept the terms and conditions of the <span>Privacy Policy</span></p>
+                    </div>
+                    <button class="send-button" id="" type="">Send</button>
+                </form>
+            </div>
+        </div>
         <!-- #endregion Footer -->
     </body>
 </html>
