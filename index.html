@@ -673,16 +673,48 @@
                 <button type="button" class="close-overlay"><svg width="8" height="8" class="icon"><use href="./images/icons.svg#icon-cross"></use></svg></button>
                 <p class="overlay-title">Leave your contacts and we will call you back</p>
                 <form action="" class="overlay-form">
-                    <div class="overlay-information-container">
-                        <label class="overlay-form-label">Name<input type="text" name="user-name" placeholder="" autofocus></label>
-                        <label class="overlay-form-label">Phone<input type="tel" name="user-tel" placeholder="" ></label>
-                        <label class="overlay-form-label">Email<input type="email" name="user-email" placeholder="" ></label>
-                        <label class="overlay-form-label">Comment<textarea class="overlay-textarea" name="user-comment" id="" placeholder="Text input"></textarea></label>
-                    </div>
-                    <div class="privacy-container">
-                        <input type="checkbox" name="privacy" id="">
-                        <p class="overlay-text">I accept the terms and conditions of the <span>Privacy Policy</span></p>
-                    </div>
+                    <ul class="overlay-form-list">
+                        <li class="form-item">
+                            <label class="overlay-form-label">
+                                Name
+                                <div class="input-container">
+                                    <input class="form-element" type="text" name="user-name" placeholder="" autofocus required>
+                                    <svg class="icon" width="12" height="12"><use href="./images/icons.svg#icon-person"></use></svg>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="form-item">
+                            <label class="overlay-form-label">
+                                Name
+                                <div class="input-container">
+                                    <input class="form-element" type="tel" name="user-tel" placeholder="" autofocus required>
+                                    <svg class="icon" width="12" height="12"><use href="./images/icons.svg#icon-phone"></use></svg>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="form-item">
+                            <label class="overlay-form-label">
+                                Name
+                                <div class="input-container">
+                                    <input class="form-element" type="email" name="user-email" placeholder="" autofocus required>
+                                    <svg class="icon" width="12" height="12"><use href="./images/icons.svg#icon-mail"></use></svg>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="form-item">
+                            <label class="overlay-form-label">
+                                Comment
+                                <textarea class="overlay-textarea form-element" name="user-comment" id="" placeholder="Text input"></textarea>
+                            </label>
+                        </li>
+                    </ul>
+                    <label class="privacy-container">
+                        <input class="privacy-checkbox visually-hidden" type="checkbox" name="privacy" id="" required>
+                        <span class="fake-checkbox">
+                            <svg class="fake-checkbox-icon icon" width="10" height="8"><use href="./images/icons.svg#icon-checkbox"></use></svg>
+                        </span>
+                        <p class="overlay-text">I accept the terms and conditions of the <a href="">Privacy Policy</a></p>
+                    </label>
                     <button class="send-button" id="" type="">Send</button>
                 </form>
             </div>
