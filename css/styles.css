@@ -734,14 +734,10 @@ footer .icon-list-item .icon-link:hover, footer .icon-list-item .icon-link:focus
     color: #8e8f99;
 }
 
-
-.privacy-label{
-    display: inline-flex;
-}
-
 .privacy-container{
     margin-bottom: 24px;
 }
+
 
 .fake-checkbox{
     border-radius: 2px;
