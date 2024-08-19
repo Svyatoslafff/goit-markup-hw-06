@@ -761,7 +761,7 @@ footer .icon-list-item .icon-link:hover, footer .icon-list-item .icon-link:focus
     border: 1px solid #404bbf;
 }
 
-.overlay-text>a{ 
+.privacy-label>a{ 
     color: #4D5AE5;
     text-decoration: underline;
 }
