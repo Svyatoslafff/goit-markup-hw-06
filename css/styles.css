@@ -79,6 +79,20 @@ textarea{
     resize: none;
 }
 
+button{
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover, button:focus{
+    background-color: #404bbf;
+}
+
 /* #endregion Basic page settings */
 
 
@@ -246,28 +260,13 @@ header .container{
 
 .hero-button {
     background: #4d5ae5;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    color: #fff;
-    cursor: pointer;
     min-width: 169px;
     padding: 16px 32px;
     border: none;
     border-radius: 4px;
     height: 56px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero-button:hover {
-    background: #404bbf;
-    cursor: pointer;
-}
-
-.hero-button:focus {
-    background: #404bbf;
-}
 /* #endregion hero */
 
 
@@ -548,23 +547,23 @@ footer .icon-list-item .icon-link:hover, footer .icon-list-item .icon-link:focus
     gap: 24px;
 }
 
-.footer-text-input{
+.footer-email-input{
     border: 1px solid #fff;
     border-radius: 4px;
     width: 264px;
     height: 40px;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     padding-left: 16px;
     background-color: transparent;
     color: #fff;
     outline: none;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
 }
 
-.footer-text-input:hover, .footer-text-input:active, .footer-text-input:focus{
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-}
-
-.footer-text-input::placeholder{
+.footer-email-input::placeholder{
     color: #fff;
 }
 
@@ -572,28 +571,17 @@ footer .icon-list-item .icon-link:hover, footer .icon-list-item .icon-link:focus
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
     border-radius: 4px;
-    width: 165px;
+    min-width: 165px;
     height: 40px;
     border: none;
     background-color: #4d5ae5;
-    color: #fff;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-    
-.footer-form-button:hover {
-    background: #404bbf;
-    cursor: pointer;
-}
-    
-.footer-form-button:focus {
-    background: #404bbf;
-}
 
 
 .footer-form .icon{
     fill: #fff;
+    margin-left: 16px;
 }
 
 /* #endregion footer */
@@ -609,42 +597,49 @@ footer .icon-list-item .icon-link:hover, footer .icon-list-item .icon-link:focus
     left: 0;
     background: rgba(46, 47, 66, 0.4);
     /* opacity: 0;
+    visibility: none;
     pointer-events: none; */
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.overlay-container
+
 .overlay-content{
-    margin: 80px auto 0 auto;
-    padding: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 72px 24px 24px 24px;
     background-color: #fff;
     border-radius: 4px;
     width: 408px;
+    min-height: 584px;
     background: #fcfcfc;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
 
-.overlay-content:hover, .overlay-content:focus{
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
-}
-
 .close-overlay{
+    position: absolute;  
+    top: 24px;
+    right: 24px;
     width: 24px;
     height: 24px;
-    margin-bottom: 24px;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    cursor: pointer;
     align-self: flex-end;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: border, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #e7e9fc;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-overlay:hover{
+.close-overlay:hover, .close-overlay:focus{
     background-color: #404bbf;
     border: none;
 }
@@ -654,13 +649,14 @@ footer .icon-list-item .icon-link:hover, footer .icon-list-item .icon-link:focus
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-overlay:hover .icon{
-    fill: #fff;
+.close-overlay:hover .icon, .close-overlay:focus .icon{
+    fill: #ffffff;
 }
 
 .overlay-container .overlay-title{
     color: #2e2f42;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .overlay-form{
@@ -669,20 +665,14 @@ footer .icon-list-item .icon-link:hover, footer .icon-list-item .icon-link:focus
     align-items: center;
 }
 
-.overlay-form .overlay-form-list{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    justify-content: center;
+.overlay-form .form-item-container{
     width: 100%;
+    margin-bottom: 8px;
 }
  
-.overlay-form-list label{
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    justify-content: flex-start;
-
+.form-item-container label{
+    display: block;
+    margin-bottom: 4px;
 }
 
 .input-container{
@@ -694,23 +684,29 @@ footer .icon-list-item .icon-link:hover, footer .icon-list-item .icon-link:focus
 
 .form-element{
     width: 100%;
-    outline: none;
-    border: 1px solid rgba(46, 47, 66, 0.4);
-    border-radius: 4px;
     height: 40px;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 8px 0 8px 38px
-
+    outline: transparent;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    /* border-color: transparent; */
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding-left: 38px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
 }
 
 .form-element:focus{
-    border: 1px solid #4d5ae5;
+    border-color: #4d5ae5;
 }
 
 .form-element + .icon{
     fill:#2E2F42;
     position: absolute;
-    left: 19px;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -720,7 +716,17 @@ footer .icon-list-item .icon-link:hover, footer .icon-list-item .icon-link:focus
     fill: #4d5ae5;
 }
 
-.overlay-text, .overlay-form-label{
+.overlay-form .text-area-container{
+    margin-bottom: 16px;
+}
+
+.form-item-container .overlay-textarea{
+    height: 120px;
+    padding: 8px 16px;
+    color: rgba(46, 47, 66, 0.4);
+}
+
+.privacy-label, .overlay-form-label{
     font-weight: 400;
     font-size: 12px;
     line-height: 1.16667;
@@ -729,9 +735,12 @@ footer .icon-list-item .icon-link:hover, footer .icon-list-item .icon-link:focus
 }
 
 
-.privacy-container{
+.privacy-label{
     display: inline-flex;
-    margin-top: 16px;
+}
+
+.privacy-container{
+    margin-bottom: 24px;
 }
 
 .fake-checkbox{
@@ -744,10 +753,10 @@ footer .icon-list-item .icon-link:hover, footer .icon-list-item .icon-link:focus
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: border, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.privacy-checkbox:checked + .fake-checkbox{
+.privacy-checkbox:checked + .privacy-label .fake-checkbox{
     background-color: #404bbf;
     border: 1px solid #404bbf;
 }
@@ -757,32 +766,20 @@ footer .icon-list-item .icon-link:hover, footer .icon-list-item .icon-link:focus
     text-decoration: underline;
 }
 
-.form-item .overlay-textarea{
-    min-height: 120px;
-    padding-left: 16px;
-}
+
 
 
 .send-button{
-    margin-top: 24px;
+    display: block;
+    margin: 0 auto;
     border-radius: 4px;
     padding: 16px 32px;
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     background-color: #4D5AE5;
-    color: #fff;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: #ffffff;
     border: none;
 }
     
-.send-button:hover {
-    background: #404bbf;
-    cursor: pointer;
-}
-    
-.send-button:focus {
-    background: #404bbf;
-}
-
 
 /* #endregion overlay */
