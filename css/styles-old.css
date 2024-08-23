@@ -329,11 +329,6 @@ header .container{
     background: #f4f4fd;
 }
 
-/* .our-team .container{
-    padding-top: 120px;
-    padding-bottom: 120px;
-} */
-
 .our-team-list{
     display: flex;
     justify-content: center;
@@ -398,7 +393,7 @@ header .container{
 
 
 .our-team-item:hover .icon-list-item a, .our-team-item:focus .icon-list-item a, .our-team-item .icon-list-item a:active,.our-team-item .icon-list-item a:focus {
-    background-color: #404bbf;;
+    background-color: #404bbf;
 }
 
 
@@ -407,12 +402,6 @@ header .container{
 
 
 /* #region our portfolio */
-
-/* .our-portfolio .container{
-    padding-top: 128px;
-    padding-bottom: 120px;
-} */
-
 .our-portfolio-list{
     display: flex;
     flex-wrap: wrap;
@@ -475,6 +464,7 @@ footer{
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
 .page-logo-span-footer{
     color: #f4f4fd;
 }
@@ -493,10 +483,10 @@ footer .page-logo{
     margin-bottom: 16px;
 }
 
-footer .icon-container{
+/* footer .icon-container{
     display: flex;
     gap: 16px;
-}
+} */
 
 .footer-title, .overlay-container .overlay-title{
     margin-bottom: 16px;
@@ -579,7 +569,7 @@ footer .icon-list-item .icon-link:hover, footer .icon-list-item .icon-link:focus
     height: 40px;
     border: none;
     background-color: #4d5ae5;
-    }
+}
 
 
 .footer-form .icon{
