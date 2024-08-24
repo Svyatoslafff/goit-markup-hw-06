@@ -26,14 +26,6 @@
         <link rel="stylesheet" href="./css/styles.css" />
     </head>
     <body>
-        <!-- #region Menu -->
-        <!-- <div class="menu-container">
-
-        </div> -->
-
-        <!-- #endregion Menu -->
-
-        <!-- #region Header -->
         <header class="header">
             <div class="container">
                 <!-- navigation -->
@@ -87,6 +79,88 @@
             </div>
         </header>
         <!-- #endregion header -->
+
+        <!-- #region menu -->
+        <div class="menu-container is-open">
+            <button type="button" class="close-overlay">
+                <svg width="8" height="8" class="icon">
+                    <use href="./images/icons.svg#icon-cross"></use>
+                </svg>
+            </button>
+            <nav class="menu-navigation">
+                <ul class="menu-nav-list">
+                    <li class="menu-nav-list-item active-menu-item">
+                        <a
+                            class="menu-nav-list-link active-menu-link"
+                            href="./index.html"
+                            >Studio</a
+                        >
+                    </li>
+                    <li class="menu-nav-list-item">
+                        <a class="menu-nav-list-link" href="">Portfolio</a>
+                    </li>
+                    <li class="menu-nav-list-item">
+                        <a class="menu-nav-list-link" href="">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+            <address class="menu-addresses">
+                <ul class="menu-addresses-list">
+                    <li class="menu-addresses-item">
+                        <a
+                            class="menu-addresses-link"
+                            href="mailto:info@devstudio.com"
+                            >info@devstudio.com</a
+                        >
+                    </li>
+                    <li class="menu-addresses-item">
+                        <a class="menu-addresses-link" href="tel:+110001111111"
+                            >+11 (000) 111-11-11</a
+                        >
+                    </li>
+                </ul>
+                <ul class="icon-list">
+                    <li class="icon-list-item">
+                        <a href="" class="icon-link">
+                            <svg class="icon" width="24" height="24">
+                                <use
+                                    href="./images/icons.svg#icon-instagram"
+                                ></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="icon-list-item">
+                        <a href="" class="icon-link">
+                            <svg class="icon" width="24" height="24">
+                                <use
+                                    href="./images/icons.svg#icon-twitter"
+                                ></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="icon-list-item">
+                        <a href="" class="icon-link">
+                            <svg class="icon" width="24" height="24">
+                                <use
+                                    href="./images/icons.svg#icon-facebook"
+                                ></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="icon-list-item">
+                        <a href="" class="icon-link">
+                            <svg class="icon" width="24" height="24">
+                                <use
+                                    href="./images/icons.svg#icon-linkedin"
+                                ></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </address>
+        </div>
+
+        <!-- #endregion menu -->
 
         <!-- #region Main -->
         <main class="main">
@@ -807,12 +881,18 @@
         <!-- #endregion overlay -->
 
         <!-- Return button -->
-        <div>
-            <a
-                style="
+        <!-- <div class="return-container is-open">
+            <a class="return" href="#page-logo-header">S</a>
+            <style>
+                .return-container {
                     position: fixed;
                     bottom: 50px;
                     right: 50px;
+                    opacity: 0;
+                    visibility: none;
+                    pointer-events: none;
+                }
+                .return {
                     border-radius: 50%;
                     width: 50px;
                     height: 50px;
@@ -821,10 +901,14 @@
                     justify-content: center;
                     align-items: center;
                     color: #fff;
-                "
-                href="#page-logo-header"
-                >S</a
-            >
-        </div>
+                    transition: background-color 250ms
+                        cubic-bezier(0.4, 0, 0.2, 1);
+                }
+                .return:hover,
+                .return:focus {
+                    background-color: #31d0aa;
+                }
+            </style>
+        </div> -->
     </body>
 </html>

@@ -31,23 +31,23 @@ ul {
 }
 
 h1,
-h2 {
+h2, .menu-nav-list-link{
     /* Roboto bold */
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     letter-spacing: 0.02em;
     font-style: normal;
+    font-size: 36px;
+    line-height: 1.11;
 }
 
 h2 {
-    font-size: 36px;
-    line-height: 1.11;
     text-align: center;
     color: #2e2f42;
     text-transform: capitalize;
 }
 
-h3 {
+h3, .menu-addresses-link {
     /* Roboto medium */
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -293,7 +293,7 @@ header .container {
     }
 }
 
-/* Menu */
+/* Menu button */
 
 .menu-button{
     border: none;
@@ -311,6 +311,75 @@ header .container {
     }
 }
 /* #endregion Header */
+
+/* #region menu */
+.menu-container{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 72px 16px 40px 16px;
+    background-color: #fff;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    opacity: 0;
+    visibility: none;
+    pointer-events: none;
+}
+
+@media screen and (min-width: 769px) {
+    .menu-container{
+        display: none;
+    }
+}
+
+.menu-nav-list{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.menu-nav-list-link{
+    color: #2e2f42;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.active-menu-link{
+    color: #404bbf;
+}
+
+.menu-nav-list-link:hover {
+    color: #404bbf;
+}
+
+.menu-nav-list-link:focus {
+    color: #404bbf;
+}
+
+.menu-addresses{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.menu-addresses-item:first-child>.menu-addresses-link{
+    color: #4d5ae5;
+    margin-bottom: 24px;
+    display: block;
+}
+
+.menu-container .icon-list{
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+/* #endregion menu */
 
 
 /* #region hero */
@@ -337,11 +406,7 @@ header .container {
     /* padding: 0; */
 }
 
-.hero-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11111;
-    letter-spacing: 0.02em;
+.hero-title{
     text-align: center;
     color: #fff;
     max-width: 216px;
@@ -854,11 +919,11 @@ footer .icon-list-item .icon-link:focus {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 72px 24px 24px 24px;
+    padding: 72px 16px 24px 16px;
     background-color: #fff;
     border-radius: 4px;
-    width: 408px;
-    min-height: 584px;
+    width: 288px;
+    min-height: 623px;
     background: #fcfcfc;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -867,3 +932,187 @@ footer .icon-list-item .icon-link:focus {
     justify-content: flex-start;
     align-items: center;
 }
+
+@media screen and (min-width:768px){
+    .overlay-content {
+        width: 408px;
+        min-height: 584px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1157px) {
+    .overlay-content{
+        top: 96px;
+        transform: translateX(-50%)
+    }
+}
+
+@media screen and (min-width:1157px) {
+
+}
+
+.close-overlay {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e7e9fc;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-overlay:hover,
+.close-overlay:focus {
+    background-color: #404bbf;
+    border: none;
+}
+
+.close-overlay .icon {
+    fill: #2E2F42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-overlay:hover .icon,
+.close-overlay:focus .icon {
+    fill: #ffffff;
+}
+
+.overlay-container .overlay-title {
+    color: #2e2f42;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.overlay-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.overlay-form .form-item-container {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.form-item-container label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-element {
+    width: 100%;
+    height: 40px;
+    outline: transparent;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    background-color: transparent;
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding-left: 38px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+}
+
+.form-element:focus {
+    border-color: #4d5ae5;
+}
+
+.form-element+.icon {
+    fill: #2E2F42;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-element:focus+.icon {
+    fill: #4d5ae5;
+}
+
+.overlay-form .text-area-container {
+    margin-bottom: 16px;
+}
+
+.form-item-container .overlay-textarea {
+    height: 120px;
+    padding: 8px 16px;
+    color: rgba(46, 47, 66, 0.4);
+}
+.form-item-container .overlay-textarea::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+
+.privacy-label,
+.overlay-form-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+
+.privacy-container {
+    margin-bottom: 24px;
+}
+
+
+.fake-checkbox {
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: transparent;
+}
+
+.privacy-checkbox:checked+.privacy-label .fake-checkbox {
+    background-color: #404bbf;
+    border: none;
+    fill: #F4F4FD;
+}
+
+.privacy-label>a {
+    color: #4D5AE5;
+    text-decoration: underline;
+}
+
+.send-button {
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 16px 32px;
+    min-width: 169px;
+    height: 56px;
+    background-color: #4D5AE5;
+    color: #ffffff;
+    border: none;
+}
+/* #endregion overlay */
